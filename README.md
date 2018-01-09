@@ -2,9 +2,10 @@
 
 DateManager makes processing easier on dates.
 
+## Installation
 Installation is easy. Just add DateManager.swift to your project.
 
-
+## Usage
 Methods whose name begins with "add" will return an instance of DateManager. So you can use the method chain style.
 
 ```
