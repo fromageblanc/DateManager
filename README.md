@@ -6,10 +6,16 @@ DateManager makes processing easier on dates.
 Installation is easy. Just add DateManager.swift to your project.
 
 ## Usage
-Methods whose name begins with "add" will return an instance of DateManager. So you can use the method chain style.
-
+To instantiate a DateManager, a date is required as a parameter.
+You can specify "Date" or "String" (RFC 3339) for the data type.
 ```
-//ex.
+let dm = DateManager(base:Date())
+let dm2 = DateManager(base:"2018-04-10T01:00:00Z")
+```
+
+
+Methods whose name begins with "add" will return an instance of DateManager. So you can use the method chain style.
+```
 let dm = DateManager(base:Date())
 
 let nextMonth = dm.addMonth(1).toString()
