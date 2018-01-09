@@ -29,7 +29,7 @@ let date3 = dm.addDay(2).addYear(10).addWeek(3).toString(style:["dateStyle":.ful
 
 DateManager makes it easy to create a calendar component for the month that baseDate belongs to.
 ```swift
-let calComps = dm.createcalendarComponents()
+let calComps = dm.createCalendarComponents()
 print(dm.baseDate)
 print(calComps.targetMonth)
 print(calComps.date)
