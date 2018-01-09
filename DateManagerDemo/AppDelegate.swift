@@ -2,8 +2,6 @@
 //  AppDelegate.swift
 //  DateManagerDemo
 //
-//  Created by 吉田誠志 on 2018/01/09.
-//  Copyright © 2018年 吉田誠志. All rights reserved.
 //
 
 import UIKit

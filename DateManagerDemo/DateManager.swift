@@ -416,7 +416,7 @@ class DateManager: NSObject {
     /// カレンダーコンポーネント作成
     ///
     /// - Returns: カレンダーコンポーネント
-    func createcalendarComponents() -> DateManager.CalendarComponents {
+    func createCalendarComponents() -> DateManager.CalendarComponents {
         
         // カレンダーコンポーネント
         var calendarComponents = DateManager.CalendarComponents()
@@ -712,7 +712,7 @@ class DateManager: NSObject {
         calendarView?.register(CalendarCell.self, forCellWithReuseIdentifier: "CalendarCell")
         
         ////  calendarComponent
-        calendarComponent = self.createcalendarComponents()
+        calendarComponent = self.createCalendarComponents()
         
         // 2. デリゲートを設定
         calendarView?.delegate = self
@@ -792,7 +792,7 @@ class DateManager: NSObject {
     @objc private func prevMonth() {
         
         wkPointer = wkPointer.addMonth(-1)
-        calendarComponent = wkPointer.createcalendarComponents()
+        calendarComponent = wkPointer.createCalendarComponents()
         
         DispatchQueue.main.async {
             // 年月ラベル ++++
@@ -809,7 +809,7 @@ class DateManager: NSObject {
     @objc private func nextMonth() {
         
         wkPointer = wkPointer.addMonth(1)
-        calendarComponent = wkPointer.createcalendarComponents()
+        calendarComponent = wkPointer.createCalendarComponents()
         
         DispatchQueue.main.async {
             // 年月ラベル ++++

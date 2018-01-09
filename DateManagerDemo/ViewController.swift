@@ -2,8 +2,6 @@
 //  ViewController.swift
 //  DateManagerDemo
 //
-//  Created by 吉田誠志 on 2018/01/09.
-//  Copyright © 2018年 吉田誠志. All rights reserved.
 //
 
 import UIKit
@@ -26,6 +24,23 @@ class ViewController: UIViewController {
         
         dm.popupCalendarDelegate = self
         
+        print(dm.baseDate.toStringWithCurrentLocale())
+        
+        print(dm.getYear()!)
+        print(dm.getMonth()!)
+        print(dm.getDay()!)
+        print(dm.getWeek()!)
+        print(dm.getWeekJ()!)
+        print(dm.getHour()!)
+        print(dm.getMinute()!)
+        print(dm.getSecond()!)
+
+        
+        let calComps = dm.createCalendarComponents()
+        print(dm.baseDate)
+        print(calComps.targetMonth)
+        print(calComps.date)
+        print(calComps.weekJ)
     }
 
     override func didReceiveMemoryWarning() {
