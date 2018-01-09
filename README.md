@@ -6,6 +6,9 @@ DateManager makes processing easier on dates.
 - iOS 9 and later 
 - Swift 4.0 and later
 
+## Memo
+- only support Portrait
+- Because it is under development, it includes some force unwrapping.
 
 ## Installation
 Installation is easy. Just add DateManager.swift to your project.
@@ -43,25 +46,25 @@ print(calComps.weekJ)
 ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日"]
 */
 ```
-CalendarComponents structure
+CalendarComponents member
 ```swift
-        var date:[String]           // 日付
-        var full:[String]           // 日付情報(フルフォーマット)
-        var fullJ:[String]          // 日付情報(ja/フルフォーマット)
-        var day:[String]            // 日
-        var week:[String]           // 曜日(英語)
-        var weekJ:[String]          // 曜日(日本語)
-        var month:[String]          // 月(英語)
-        var monthJ:[String]         // 月(日本語)
-        var year:[String]           // 年
-        var numberOfWeek:[Int]      // 第N週
-        var targetMonth:String      // カレンダー対象月
-        var targetYear:Int          // カレンダー対象年
-        var gengou:String           // カレンター対象元号
-        var numberOfWeeks:Int       // 週数
-        var numberOfCells:Int       // マス数
-        var previousMonth:String    // 前月
-        var nextMonth:String        // 翌月
+var date:[String]           // 日付
+var full:[String]           // 日付情報(フルフォーマット)
+var fullJ:[String]          // 日付情報(ja/フルフォーマット)
+var day:[String]            // 日
+var week:[String]           // 曜日(英語)
+var weekJ:[String]          // 曜日(日本語)
+var month:[String]          // 月(英語)
+var monthJ:[String]         // 月(日本語)
+var year:[String]           // 年
+var numberOfWeek:[Int]      // 第N週
+var targetMonth:String      // カレンダー対象月
+var targetYear:Int          // カレンダー対象年
+var gengou:String           // カレンター対象元号
+var numberOfWeeks:Int       // 週数
+var numberOfCells:Int       // マス数
+var previousMonth:String    // 前月
+var nextMonth:String        // 翌月
 ```
 
 
