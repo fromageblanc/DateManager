@@ -20,6 +20,32 @@ You can specify "Date" or "String" (RFC 3339) for the data type.
 let dm = DateManager(base:Date())
 let dm2 = DateManager(base:"2018-04-10T01:00:00Z")
 ```
+It is possible to extract year, month, day, hours, minutes, and seconds separately
+```swift
+print(dm.baseDate.toStringWithCurrentLocale())
+        
+print(dm.getYear()!)
+print(dm.getMonth()!)
+print(dm.getDay()!)
+print(dm.getWeek()!)
+print(dm.getWeekJ()!)
+print(dm.getHour()!)
+print(dm.getMinute()!)
+print(dm.getSecond()!)
+
+/* output
+2018-01-09 18:23:51
+2018
+1
+9
+Tuesday
+火曜日
+18
+23
+51
+*/
+```
+
 
 Methods whose name begins with "add" will return an instance of DateManager. So you can use the method chain style.
 ```swift
@@ -38,8 +64,7 @@ print(calComps.targetMonth)
 print(calComps.date)
 print(calComps.weekJ)
 
-// console output
-/*
+/* output
 2018-01-09 08:54:26 +0000
 2018.01
 ["2018-01-01", "2018-01-02", "2018-01-03", "2018-01-04", "2018-01-05", "2018-01-06", "2018-01-07", "2018-01-08", "2018-01-09", "2018-01-10", "2018-01-11", "2018-01-12", "2018-01-13", "2018-01-14", "2018-01-15", "2018-01-16", "2018-01-17", "2018-01-18", "2018-01-19", "2018-01-20", "2018-01-21", "2018-01-22", "2018-01-23", "2018-01-24", "2018-01-25", "2018-01-26", "2018-01-27", "2018-01-28", "2018-01-29", "2018-01-30", "2018-01-31", "2018-02-01", "2018-02-02", "2018-02-03", "2018-02-04"]
