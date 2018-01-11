@@ -108,12 +108,15 @@ protocol PopupCalendarDelegate {
 
 add to your View Controller
 ```swift
+// set delegate
 dm.popupCalendarDelegate = self
 ```
 ```swift
+// calendar show
 dm.popupCalendar(completion: { () in
     // your operation
 })
+```
 ```swift
 extension ViewController:PopupCalendarDelegate {
     func calendarSelected(_ data: PopupCalendarCell,calendar:UICollectionView) {
