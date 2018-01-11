@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.72 clang-900.0.38)"
+options: "9136e2f661b589a58d0e7f6c93e655ce"
+build_time: [1515563092, 386765000]
+inputs:
+  "/Users/s_yoshida/Project/xcode/DateManagerDemo/DateManagerDemo/ViewController.swift": [9223372036, 854775807]
+  "/Users/s_yoshida/Project/xcode/DateManagerDemo/DateManagerDemo/DateManager.swift": [9223372036, 854775807]
+  "/Users/s_yoshida/Project/xcode/DateManagerDemo/DateManagerDemo/AppDelegate.swift": [9223372036, 854775807]

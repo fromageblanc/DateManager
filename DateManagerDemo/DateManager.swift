@@ -30,8 +30,7 @@ class DateManager: NSObject {
     var formatter:DateFormatter!
     var formatterJ:DateFormatter!
     var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
-    var components = DateComponents()
-    
+    var components:DateComponents!
     let defaultDateStyle = DateFormatter.Style.medium
     let defaultTimeStyle = DateFormatter.Style.none
     let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ" // RFC3339
@@ -793,6 +792,17 @@ class DateManager: NSObject {
         
         wkPointer = wkPointer.addMonth(-1)
         calendarComponent = wkPointer.createCalendarComponents()
+        
+        // コンポーネントデータ作成後は不要なのでwkPointerの参照先は極力削除
+        wkPointer.calendarView = nil
+        wkPointer.formatter = nil
+        wkPointer.formatterJ = nil
+        wkPointer.calendarComponent = nil
+        wkPointer.components = nil
+        wkPointer.ymLabel = nil
+        wkPointer.prevMonthButton = nil
+        wkPointer.nextMonthButton = nil
+        wkPointer.cancelButton = nil
         
         DispatchQueue.main.async {
             // 年月ラベル ++++
