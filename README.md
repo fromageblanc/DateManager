@@ -46,6 +46,33 @@ Tuesday
 */
 ```
 
+"toString()", "toStringJ()" can specify the format
+
+```swift
+print(dm.toString()!)
+print(dm.toStringJ()!)
+print(dm.toString(style:["dateStyle": .short,"timeStyle":.full])!)
+print(dm.toString(style:["dateStyle": .medium])!)
+print(dm.toString(style:["dateStyle": .long])!)
+print(dm.toString(style:["dateStyle": .full,"timeStyle":.full])!)
+print(dm.toStringJ(style:["dateStyle": .short])!)
+print(dm.toStringJ(style:["dateStyle": .medium,"timeStyle":.medium])!)
+print(dm.toStringJ(style:["dateStyle": .long])!)
+print(dm.toStringJ(style:["dateStyle": .full,"timeStyle":.short])!)
+
+/* output
+Jan 16, 2018
+H30/01/16
+1/16/18, 1:43:40 PM Japan Standard Time
+Jan 16, 2018
+January 16, 2018
+Tuesday, January 16, 2018 at 1:43:40 PM Japan Standard Time
+H30/01/16
+H30/01/16 13:43:40
+平成30年1月16日
+平成30年1月16日 火曜日 13:43
+ */
+```
 
 Methods whose name begins with "add" will return an instance of DateManager. So you can use the method chain style.
 ```swift
